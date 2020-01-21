@@ -48,7 +48,7 @@ async function run() {
       deployment_id: deployment.data.id,
       state: initialStatus,
       log_url: defaultUrl,
-      target_url: url
+      environment_url: url
     });
 
     core.setOutput("deployment_id", deployment.data.id.toString());

@@ -37,7 +37,6 @@ async function run() {
       repo: context.repo.repo,
       ref: context.ref,
       required_contexts: [],
-      environment,
       transient_environment: true,
       auto_merge,
       description
@@ -48,7 +47,8 @@ async function run() {
       deployment_id: deployment.data.id,
       state: initialStatus,
       log_url: defaultUrl,
-      environment_url: url
+      target_url: url,
+      environment_url: url,
     });
 
     core.setOutput("deployment_id", deployment.data.id.toString());
